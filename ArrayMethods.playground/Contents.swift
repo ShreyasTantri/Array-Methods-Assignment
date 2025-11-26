@@ -55,5 +55,37 @@ let b = [1,2,3]
 print(b.isEmpty)
 
 
+//  *** Sorting and Reordering ***
 
+// 1. Sorted
+var ranks = [3,66,123,453,4,7]
+var sortedRanks = ranks.sorted()
+print("After sorting - \(sortedRanks)")
+print("Original Array - \(ranks)\n")
 
+// 2. Sort
+var orders = [3,66,123,453,4,7]
+orders.sort()
+print("Original Array After sorting - \(orders)\n")
+
+// 3. Sorted(by: )
+var num1 = [3,66,123,453,4,7]
+var newnum1 = num1.sorted(by: >)
+print("Original Array - \(num1)")
+print("After sorting by descending order - \(newnum1)\n")
+
+// 4. Sort(by: )
+var num2 = [3,66,123,453,4,7]
+num2.sort(by: >)
+print(num2)
+
+// 5. Reversed
+var num3 = [3,66,123,453,4,7]
+var newnum3 = num3.reversed()
+print(newnum3)
+var num3Again = Array(num3.reversed())
+print(num3Again)
+
+// 4. Reverse
+var num4 = [3,66,123,453,4,7]
+num4.reverse()
