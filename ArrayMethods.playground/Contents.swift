@@ -86,6 +86,44 @@ print(newnum3)
 var num3Again = Array(num3.reversed())
 print(num3Again)
 
-// 4. Reverse
+// 6. Reverse
 var num4 = [3,66,123,453,4,7]
 num4.reverse()
+
+//  *** Higher order functions ***
+
+// *** map, filter, reduce, flatmap, contact map, foreach ***
+
+// 1. map
+var digits = [1,4,6,8]
+var newdigits1 = digits.map({ item in
+ item + 10
+})
+
+var newdigits2 = digits.map({ $0 + 10 })
+print(newdigits1)
+print(newdigits2)
+
+var examples = [1,4,5,2,7]
+var newexamples = examples.map({ [$0, $0 * 4] })
+print(newexamples)
+
+// 2. filter
+var sample = [1,4,6,8]
+var newsample = sample.filter({ $0 % 2 == 0 })
+print(newsample)
+
+var names = ["Shreyas", "Swathi", "Raj", "Jim"]
+var newnames = names.filter({ $0.count > 4 })
+print(newnames)
+
+// 3. reduce
+
+// 4. flatmap
+var copies = [1,4,5,2,7]
+var newcopies = copies.flatMap({ [$0, $0 * 4] })
+print(newcopies)
+
+// 5. foreach
+
+// *** Slicing
