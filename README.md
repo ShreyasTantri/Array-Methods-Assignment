@@ -12,10 +12,6 @@ A clean, focused repository of Swift playgrounds for practicing **array methods*
 * [Usage](#usage)
 * [Learning goals](#learning-goals)
 * [Requirements](#requirements)
-* [How to contribute](#how-to-contribute)
-* [Planned improvements](#planned-improvements)
-* [License](#license)
-* [Contact](#contact)
 
 ---
 
@@ -82,7 +78,7 @@ Placeholders are already present so you can add more problems as you practice.
 * Strengthen Swift array skills
 * Learn to choose the correct array method for a given problem
 * Gain fluency with functional programming patterns in Swift
-* Write clear, idiomatic, and testable playground code
+* Write clear and testable playground code
 
 ---
 
@@ -91,27 +87,3 @@ Placeholders are already present so you can add more problems as you practice.
 * macOS (version compatible with your Xcode)
 * Xcode (supports Swift Playgrounds)
 * Basic Swift knowledge
-
----
-
-## How to contribute
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/my-challenge`)
-3. Add exercises, tests, and/or documentation
-4. Create a pull request with a concise description of changes
-
-### Commit message suggestions
-
-* `docs: add README.md`
-* `chore: add playground skeleton`
-* `feat: add solution for <problem-name>`
-
----
-
-## Planned improvements
-
-* Add performance notes (time complexity) for each method
-* Add playground screenshots and short screencasts
-* Add more interview-style problems and edge-case tests
-* Add an advanced track with optimized solutions (in-place algorithms)
