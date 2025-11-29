@@ -28,8 +28,7 @@ This repo contains hands-on practice focused on Swift array APIs and functional 
 ## Project structure
 
 ```
-iOS tasks/
-└── ArrayMethods/
+Array-Methods-Assignment/
     ├── ArrayMethods.playground
     └── AssignmentQstns.playground
 ```
