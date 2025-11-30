@@ -1,13 +1,39 @@
 /*
  1. Given an array of words, find the index of the first word that starts with the letter "s", ignoring case.
  ["Apple", "banana", "Cherry", "strawberry", "Grape", "sandwich"]
+*/
 
+var words1 =  ["Apple", "banana", "Cherry", "strawberry", "Grape", "sandwich"]
 
+if let index = words1.firstIndex(where: { $0.first?.lowercased() == "s".lowercased() }){
+    print(index)
+} else {
+    print("No value found")
+}
+
+/*
  2. Given an array of words:
  ["tree", "queue", "sky", "cooperate", "apple"]
  Find the index of the first word that has more than 3 vowels.
  Vowels: a, e, i, o, u (ignore case)
+*/
+let vowels = "aeiou"
+var words =  ["tree", "queue", "sky", "cooperate", "apple"]
 
+if let index = words.firstIndex(where: { word in
+    var count = 0
+    
+    for ch in words {
+        if vowels.contains(ch.lowercased()) {
+            count += 1
+        }
+    }
+    return count > 3
+}) {
+    print(index)
+}
+
+/*
  3. Given an array of strings: —> little complex
 
  ["Bob", "Alice", "john", "BOB", "ALICE", "mike"]
@@ -21,6 +47,4 @@
  So the answer should be:
  Index = 3
  */
-
-// 1.
 
