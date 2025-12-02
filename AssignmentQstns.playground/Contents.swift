@@ -6,7 +6,7 @@
 var words1 =  ["Apple", "banana", "Cherry", "strawberry", "Grape", "sandwich"]
 
 if let index = words1.firstIndex(where: { $0.first?.lowercased() == "s".lowercased() }){
-    print(index)
+    print("1st - \(index)")               // 3
 } else {
     print("No value found")
 }
@@ -23,14 +23,14 @@ var words =  ["tree", "queue", "sky", "cooperate", "apple"]
 if let index = words.firstIndex(where: { word in
     var count = 0
     
-    for ch in words {
+    for ch in word {
         if vowels.contains(ch.lowercased()) {
             count += 1
         }
     }
     return count > 3
 }) {
-    print(index)
+    print("2nd - \(index)")       // 3
 }
 
 /*
@@ -48,3 +48,16 @@ if let index = words.firstIndex(where: { word in
  Index = 3
  */
 
+var names =  ["Bob", "Alice", "john", "BOB", "ALICE", "mike"]
+var seen: [String] = []
+
+if let index = names.firstIndex(where: { word in
+    if seen.contains(word.lowercased()) {
+        return true
+    } else {
+        seen.append(word.lowercased())
+        return false
+    }
+}) {
+    print("3rd - \(index)")       // 3
+}
