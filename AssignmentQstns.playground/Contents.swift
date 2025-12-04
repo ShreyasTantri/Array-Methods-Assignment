@@ -30,7 +30,7 @@ if let index = words.firstIndex(where: { word in
     }
     return count > 3
 }) {
-    print("2nd - \(index)")       // 3
+    print("2nd - \(index)")       // 1
 }
 
 /*
@@ -103,7 +103,7 @@ func isFirstOrLastFive(_ arr: [Int]) -> Bool {
 
 var array: [Int] = [2, 1, 2, 5]
 let result = isFirstOrLastFive(array)
-print(result)
+print(result)                                    // true
 
 /*
 5. Check for Adjacent 3s
@@ -127,8 +127,8 @@ Returns false otherwise.
 
 func hasTwoAdjacentThrees(_ arr: [Int]) -> Bool {
     // your code here
-    if arr.count > 0 {
-        for i in 0..<arr[arr.count - 2] {
+    if arr.count > 1 {
+        for i in 0..<arr.count - 1 {
             if arr[i] == 3 && arr[i + 1] == 3 {
                 return true
             }
@@ -138,11 +138,60 @@ func hasTwoAdjacentThrees(_ arr: [Int]) -> Bool {
     return false
 }
 
-//var arrayNums: [Int] = [5, 5, 12, 21, 5, 54, 51, 55, 75, 61, 72, 8, 3, 3]
+var arrayNums: [Int] = [5, 5, 12, 21, 5, 54, 51, 55, 75, 61, 72, 8, 3, 3]           // true
 //var arrayNums: [Int] = [1, 3, 3, 5]                   // true
 //var arrayNums: [Int] = [3, 1, 3]                    // false
 //var arrayNums: [Int] = []                               // false
 
-var arrayNums: [Int] = [1, 3, 3, 5]
+//var arrayNums: [Int] = [1, 3, 3, 5]
 let answer = hasTwoAdjacentThrees(arrayNums)
-print(answer)
+print(answer)                                               // true
+
+
+/*
+ 6. Count Even Numbers in an Array
+ Write a function that returns how many even numbers are inside a given integer array.
+ 
+ [2, 5, 6, 7, 8] → there are 3 even numbers (2, 6, 8)
+ */
+
+var numbersArray: [Int] = [5, 4, 12, 21, 48, 54, 51, 55, 75, 61, 72, 8, 3, 0]
+//var numbersArray: [Int] = [2, 5, 6, 7, 8]
+
+//func evenCount(_ array: [Int]) -> Int {
+//    var count = 0
+//    for i in 0..<array.count {
+//        if array[i] % 2 == 0 {
+//            count += 1
+//        }
+//    }
+//    return count
+//}
+
+func evenCount(_ array: [Int]) -> Int {
+    var count = 0
+    
+    for num in array {
+        if num % 2 == 0 {
+            count += 1
+        }
+    }
+    return count
+}
+
+
+let totalCount = evenCount(numbersArray)
+print(totalCount)                       // 7
+
+
+/*
+ 7. Three Consecutive Increasing Numbers
+ Write a function that returns true if the array contains three numbers in a row where each next one is exactly +1 from the previous.
+ 
+ [4, 5, 6] → true
+ [1, 2, 4, 5, 6] → true (because 4,5,6 is a sequence)
+ [3, 5, 6, 7] → true (sequence is 5,6,7)
+ [1, 3, 5] → false
+ [7, 8] → false
+ [] → false
+ */
