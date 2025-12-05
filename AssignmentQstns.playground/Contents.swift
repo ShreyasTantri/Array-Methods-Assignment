@@ -195,3 +195,24 @@ print(totalCount)                       // 7
  [7, 8] → false
  [] → false
  */
+
+func threeConsecutive(_ array: [Int]) -> Bool {
+    var count = 0
+    if array.count == 0 {
+        return false
+    }
+    for i in 0..<array.count - 2 {
+        if array[i+1] == array[i] + 1 && array[i+2] == array[i] + 2 {
+            count += 1
+        }
+    }
+    if count == 1 {
+        return true
+    }
+    
+    return false
+}
+
+var elements: [Int] =   [4, 5, 6]
+let isContinious = threeConsecutive(elements)
+print(isContinious)
