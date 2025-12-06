@@ -17,8 +17,19 @@ numbers.remove(at: 4)
 print("After removing - \(numbers)")      // [100,1,2,3]
 
 // 4. Remove last - Removes the last element. Alternative popLast()
+// Eg. 1
 numbers.removeLast()
 print("After removeLast - \(numbers)")      // [100,1,2]
+
+// Eg. 2
+//var arrayNums: [Int] = []
+//arrayNums.removeLast()
+//print("After removeLast - \(arrayNums)")      // removeLast crash - if array is empty
+
+// Eg. 3
+//var arrayNum: [Int] = []
+//arrayNum.popLast()
+//print("After popLast - \(arrayNum)")      // nil
 
 // 5. Remove All - Removes all elements
 numbers.removeAll()
@@ -27,9 +38,11 @@ print("After removeAll - \(numbers)")      // []
 
 var words = ["red", "blue", "green", "blue"]
 
-words.removeAll{ item in
-    item == "blue"
-}
+//words.removeAll { item in
+//    item == "blue"
+//}
+
+words.removeAll { $0 == "blue" }
 print("After removing blue - \(words)")
 
 //  *** Finding and checking values ***
@@ -40,15 +53,15 @@ print(nums.contains(3))  // true
 
 // 2. firstIndex
 var fruits = ["Apple", "Banana", "Orange"]
-//var idx = fruits.firstIndex(of: "Shreyas")  // nil
+//var idx = fruits.firstIndex(of: "Shreyas")        // nil
 
 if let idx = fruits.firstIndex(of: "Orange") {
-    print("After firstIndex(of: ) - \(idx)")      // 2
+    print("After firstIndex(of: ) - \(idx)")                    // 2
 }
 
 var numbs = [1,3,3,4,5]
-if let even = numbs.firstIndex(where: { $0 % 2 == 0 }) {
-    print(even)                                     // 3
+if let evenIndex = numbs.firstIndex(where: { $0 % 2 == 0 }) {
+    print(evenIndex)                                             // 3
 }
 
 // 3. isEmpty
