@@ -187,3 +187,26 @@ print(num5.dropLast(2))     // [3,66,123,453]
 
 // 4. dropFirst
 print(num5.dropFirst(5))       // [7]
+
+
+//
+// Methods using Strings
+
+// firstIndex
+var board = ["CBSE","ICSE","STATE","GOVT"]
+if let evenIndex = board.firstIndex(where: { $0.lowercased() == "Govt".lowercased() }) {
+    print(evenIndex)                                                        // 3
+}
+
+// Sorted
+var animals = ["Zebra", "Ant", "Donkey", "Yalk", "Lion", "Cat", "Wolf"]
+var newSorted = animals.sorted()
+
+// Sort
+animals.sort()
+
+// Sorted(by: )
+var fruit = ["banana", "apple", "orange"]
+fruit.sorted(by: <)
+
+// Reversed, Reverse, reduce, flatmap, compactMap, filter, prefix, suffix, dropLast, dropFirst
